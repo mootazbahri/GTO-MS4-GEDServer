@@ -55,6 +55,10 @@ public class Document implements Serializable{
 	@Column(name = "archived")
 	private boolean archived;
 	
+	@Column(name = "sorted")
+	private boolean sorted;
+	
+	
 	@OneToOne(fetch = FetchType.LAZY,
             cascade =  CascadeType.ALL,
             mappedBy = "document")

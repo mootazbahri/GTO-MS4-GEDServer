@@ -89,6 +89,7 @@ public class GEDClientRestResource {
 	        d.setUploadDir(response.getFileDownloadUri());
 	        d.setSrcFile("uploads/Client/"+d.getId()+"/"+d.getName());
 	        d.setUploadDate(new Date());
+	        d.setSorted(false);
 	        d = documentService.save(d);
 	        /*
              * +---------------------------------------------------------------------------+
@@ -191,6 +192,7 @@ public class GEDClientRestResource {
  	                .path(document.getName())
  	                .toUriString();
     		document.setUploadDir(fileDownloadUri);
+    		document.setSorted(true);
     		documentService.save(document);
     	} 
     	

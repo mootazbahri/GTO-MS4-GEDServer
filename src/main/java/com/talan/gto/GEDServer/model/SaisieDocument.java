@@ -35,14 +35,14 @@ public class SaisieDocument implements Serializable{
 	@Column(name = "quiEstMalade")
 	private String quiEstMalade;
 	
-	@JsonFormat(pattern="dd/MM/yyyy")
+	@JsonFormat(pattern= "dd/MM/yyyy")
 	@Column(name = "dateNaissance")
 	private Date dateNaissance;
 	
 	@Column(name = "ordenanceOuNon")
 	private boolean ordenanceOuNon;
 	
-	@JsonFormat(pattern="dd/MM/yyyy")
+	@JsonFormat(pattern= "dd/MM/yyyy")
 	@Column(name = "dateEntree")
 	private Date dateEntree;
 	
@@ -50,14 +50,14 @@ public class SaisieDocument implements Serializable{
 	@Column(name = "dateSortie")
 	private Date dateSortie;
 	
-	@Column(name = "montant" , columnDefinition = "FLOAT(8,3)")
+	@Column(name = "montant" , columnDefinition = "FLOAT(8)")
 	private double montant;
 	
 	/*+---------------------------------+
 	 *| if  ordenanceOuNon is true      |
 	 *+---------------------------------+
 	 */
-	@Column(name = "montantordenance" , columnDefinition = "FLOAT(8,3)")
+	@Column(name = "montantordenance" , columnDefinition = "FLOAT(8)")
 	private double montantordenance;
 	
 	//dentaire
@@ -73,7 +73,7 @@ public class SaisieDocument implements Serializable{
 	@Column(name = "dents")
 	private String dents;
 	
-	@Column(name = "montantTotal" , columnDefinition = "FLOAT(8,3)")
+	@Column(name = "montantTotal" , columnDefinition = "FLOAT(8)")
 	private double montantTotal;
 	
 	@OneToOne(fetch = FetchType.LAZY, optional = false)
